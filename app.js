@@ -109,6 +109,14 @@ fs.readdirSync(path.join(__dirname, 'module'))
               res.append('Set-Cookie', cookies)
             }
           }
+        if(answer.jump){//跳转
+          if(answer.jump.address){
+            res.redirect(answer.jump.address)//302跳转到指定地址
+          }else{
+            res.sendStatus(404)//地址不存在返回404
+          }
+          
+        }
           res.status(answer.status).send(answer.body)
         })
         .catch((answer) => {
