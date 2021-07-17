@@ -8,6 +8,7 @@ module.exports = (query, request) => {
   const data = {
     ids: '[' + query.id + ']',
     br: parseInt(query.br || 999000),
+    redirect: query.redirect || false,
   }
   return request(
     'POST',

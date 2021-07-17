@@ -151,6 +151,7 @@ const createRequest = (method, url, data, options) => {
     }
     axios(settings)
       .then((res) => {
+        console.log(settings.data)
         const body = res.data
         answer.cookie = (res.headers['set-cookie'] || []).map((x) =>
           x.replace(/\s*Domain=[^(;|$)]+;*/, ''),

@@ -1045,7 +1045,7 @@ export function song_order_update(
 ): Promise<Response>
 
 export function song_url(
-  params: { id: string | number; br?: string | number } & RequestBaseConfig,
+  params: { id: string | number; br?: string | number ; redirect?: boolean } & RequestBaseConfig,
 ): Promise<Response>
 
 export function top_album(
