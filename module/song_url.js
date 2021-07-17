@@ -8,7 +8,6 @@ module.exports = (query, request) => {
   const data = {
     ids: '[' + query.id + ']',
     br: parseInt(query.br || 999000),
-    redirect: query.redirect || false,
   }
   return request(
     'POST',
@@ -20,6 +19,7 @@ module.exports = (query, request) => {
       proxy: query.proxy,
       realIP: query.realIP,
       url: '/api/song/enhance/player/url',
+      redirect: query.redirect || false,
     },
   )
 }
