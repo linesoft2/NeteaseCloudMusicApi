@@ -12,7 +12,9 @@
     "pkglinux": "pkg . -t node14-linux-x64 -o app",
     "pkgmacos": "pkg . -t node14-macos-x64 -o app"
   },
-  "bin": "./app.js",
+  "bin": {
+    "NeteaseCloudMusicApi": "app.js"
+  },
   "pkg": {
     "scripts": "module/*.js"
   },
